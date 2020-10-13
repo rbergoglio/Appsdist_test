@@ -13,7 +13,7 @@
         android:layout_margin="15dp"
         android:textSize="35dp"
         android:textStyle="bold"
-        android:id="@+id/txtMensaje"/>
+        android:id="@+id/txtMessage"/>
 
     <Button
         android:id="@+id/btnCamera"

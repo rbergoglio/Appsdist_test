@@ -11,14 +11,14 @@ import android.widget.TextView;
 
 public class MainPageActivity extends AppCompatActivity {
 
-    private TextView txtMensaje;
+    private TextView txtMessage;
     private Button btnCamera;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
-        txtMensaje = findViewById(R.id.txtMensaje);
+        txtMessage = findViewById(R.id.txtMessage);
         btnCamera = findViewById(R.id.btnCamera);
         btnCamera.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,7 +32,7 @@ public class MainPageActivity extends AppCompatActivity {
         });
 
         String nombre = getIntent().getStringExtra("nombre");
-        txtMensaje.setText("Bienvenido "+ nombre);
+        txtMessage.setText("Bienvenido "+ nombre);
     }
 
 

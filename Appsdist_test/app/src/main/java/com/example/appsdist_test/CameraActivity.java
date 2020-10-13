@@ -49,6 +49,7 @@ public class CameraActivity extends AppCompatActivity {
         if(requestCode == 100){
             Bitmap captureImage = (Bitmap)data.getExtras().get("data");
             imageView.setImageBitmap(captureImage);
+            // todo: save captureImage somewhere on the phone
         }
         super.onActivityResult(requestCode, resultCode, data);
     }

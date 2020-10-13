@@ -10,32 +10,29 @@ import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private Button btnAceptar;
-    private EditText txtUsuario;
+    private Button btnAccept;
+    private EditText txtUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        btnAceptar = findViewById(R.id.btnAceptar);
-        txtUsuario = findViewById(R.id.txtUsuario);
+        btnAccept = findViewById(R.id.btnAccept);
+        txtUser = findViewById(R.id.txtUser);
 
-        btnAceptar.setOnClickListener(new View.OnClickListener() {
+        btnAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nombre = txtUsuario.getText().toString();
+                String name = txtUser.getText().toString();
 
-                if(nombre.isEmpty())
-                    nombre = "Extraño";
+                if(name.isEmpty())
+                    name = "Extraño";
 
                 // Intent: un vinculo entre actividades, origen -> destino
                 Intent i = new Intent(LoginActivity.this, MainPageActivity.class);
-                i.putExtra("nombre",nombre);
+                i.putExtra("name",name);
                 startActivity(i);
             }
         });
-    }
-    void caca(){
-
     }
 }
